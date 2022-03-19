@@ -1,7 +1,8 @@
 # Importando o arquivo do exercÃ­cio 3
 if(!("xlsx") %in% installed.packages()) install.packages("xlsx", type = "source") 
 library(xlsx)
-eb = read.xlsx("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio3.xlsx",encoding =  "UTF-8", sheetName = "Sheet1")
+#eb = read.xlsx("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio3.xlsx",encoding =  "UTF-8", sheetName = "Sheet1")
+eb = read.xlsx("./dados/exercicio3.xlsx",encoding =  "UTF-8", sheetName = "Sheet1")
 head(eb)
 
 # calculando a mediana

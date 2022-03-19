@@ -4,8 +4,9 @@ if (!("readxl") %in% installed.packages()) install.packages("readxl")
 # Carregando a biblioteca
 library(readxl)
 
-# Importando o arquivo do exercÃ­cio 1
-df.ex2 <- read_excel("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio2.xls",skip = 1, col_names = "Casas", col_types = c("numeric"))
+# Importando o arquivo do exercício 1
+#df.ex2 <- read_excel("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio2.xls",skip = 1, col_names = "Casas", col_types = c("numeric"))
+df.ex2 <- read_excel("./dados/exercicio2.xls",skip = 1, col_names = "Casas", col_types = c("numeric"))
 
 # Tabelas de Frequencia
 ex2.fabs<-table(df.ex2$Casas) #Frequencia absoluta
@@ -28,11 +29,11 @@ tabela
 
 # calculando a media
 ex2.media <- mean(df.ex2$Casas)
-print(paste("MÃ©dia dos numeros das Casas:", ex2.media))
+print(paste("Média dos numeros das Casas:", ex2.media))
 
 # calculando a mediana
 ex2.mediana = median(df.ex2$Casas)
-print(paste("MÃ©diana dos numeros das Casas:", ex2.mediana))
+print(paste("Mediana dos numeros das Casas:", ex2.mediana))
 
 # calculando a moda usando funcao
 

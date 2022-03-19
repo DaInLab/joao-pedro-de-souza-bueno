@@ -5,7 +5,9 @@ if (!("readxl") %in% installed.packages()) install.packages("readxl")
 library(readxl)
 
 # Importando o arquivo do exercício 1
-df.ex1 <- read_excel("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio1.xls",skip = 1, col_names = "tx.juros", col_types = c("numeric"))
+#df.ex1 <- read_excel("C:/Users/Takahashi dos Anjos/Documents/UNESP/IEAD-2022/joao-pedro-de-souza-bueno/dados/exercicio1.xls",skip = 1, col_names = "tx.juros", col_types = c("numeric"))
+df.ex1 <- read_excel("./dados/exercicio1.xls",
+                     skip = 1, col_names = "tx.juros", col_types = c("numeric"))
 
 # calculando a media
 ex1.media <- mean(df.ex1$tx.juros)
@@ -96,3 +98,4 @@ hist(df.ex1$tx.juros)
 lines(df.ex1$tx.juros)
 
 stripchart(df.ex1$tx.juros, vertical = T)
+
